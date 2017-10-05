@@ -399,6 +399,9 @@ class Base(object):
             self.history.close()
         self._store_persistent_data()
         self._closeRpmDB()
+        del self._goal
+        del self._repos
+        del self._sack
 
     def read_all_repos(self, opts=None):
         # :api
